@@ -6,8 +6,7 @@ import "./urna.css"
 const Urna = () =>{
   return(
     <div className="backUrna">
-      <input className="screenUrna" type="text" />
-      <div className="keyUrna"><KeyNumCopy/></div>
+     <KeyNumCopy/>
     </div>
   )
 }

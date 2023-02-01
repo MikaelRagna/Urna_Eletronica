@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import Tecla from '../Components/sounds/tecla.mp3';
+import Confirma from '../Components/sounds/confirma.mp3';
 
 import "../Components/keyNumCopy.css"
 
-
-const keyNumCopy = () => {
+export default function KeyNumCopy(){
 
   const [botao1, setBotao1] = useState('1');
   const [botao2, setBotao2] = useState('2');
@@ -103,24 +104,43 @@ const keyNumCopy = () => {
     <div>
       <div>
         <h1 class="selo">Justiça Eleitoral</h1>
+        <div className="numCand">
+            <input type="text" maxLength="1" value={num1Cand} readOnly />
+            <input type="text" maxLength="1" value={num2Cand} readOnly />
+          </div>
+          {candidatos.map((item) => {
+            return (
+              voto === item.numero ? (
+
+                <div key={item.id}>
+                  <div className="nomeCand">
+                    <h2> {item.nome} </h2>
+                    <p> Partido: <strong>{item.partido}</strong> </p>
+                  </div>
+
+                  <div className="fotoCandidato">
+                    <img src={item.img} alt={item.nome} />
+                  </div>
+
+                </div>
+
+              ) : null)})}
         <div class="keys">
-          <button class="num um">1</button>
-          <button class="num dois">2</button>
-          <button class="num tres">3</button>
-          <button class="num quatro">4</button>
-          <button class="num cinco">5</button>
-          <button class="num seis">6</button>
-          <button class="num sete">7</button>
-          <button class="num oito">8</button>
-          <button class="num nove">9</button>
-          <button class="num zero">0</button>
-          <button class="num branco">BRANCO</button>
-          <button class="num corrige">CORRIGE</button>
-          <button class="num confirma">CONFIRMA</button>
+          <button onClick={()=>insereNum(botao1)} class="num um">1</button>
+          <button onClick={()=>insereNum(botao2) } class="num dois">2</button>
+          <button onClick={()=>insereNum(botao3) } class="num tres">3</button>
+          <button onClick={()=>insereNum(botao4) } class="num quatro">4</button>
+          <button onClick={()=>insereNum(botao5) } class="num cinco">5</button>
+          <button onClick={()=>insereNum(botao6) } class="num seis">6</button>
+          <button onClick={()=>insereNum(botao7) } class="num sete">7</button>
+          <button onClick={()=>insereNum(botao8) } class="num oito">8</button>
+          <button onClick={()=>insereNum(botao9) } class="num nove">9</button>
+          <button onClick={()=>insereNum(botao0) } class="num zero">0</button>
+          <button onClick={()=>insereNum(botaoBranco) } class="num branco">BRANCO</button>
+          <button onClick={()=>insereNum(botaoCorrige) } class="num corrige">CORRIGE</button>
+          <button onClick={()=>insereNum(botaoConfirma) } class="num confirma">CONFIRMA</button>
         </div>
       </div>
     </div>
   )
 }
-
-export default keyNumCopy;
