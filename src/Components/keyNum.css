@@ -1,0 +1,36 @@
+.keys{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table_teclado{
+  font-size: 2rem;
+ 
+}
+
+.table_teclado tr td {
+  background: #000000;
+  color: #FFF;
+  padding: 1.1rem ;
+  margin: 1rem;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.control{
+  font-size: 0.5rem;
+}
+
+.table_teclado tr td:hover {
+  background: #525252;
+}
+
+.btn_delete {
+  position: absolute;
+  left: .1em;
+  bottom: .1em;
+  width: 19px;
+}
