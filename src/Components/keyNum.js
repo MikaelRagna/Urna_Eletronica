@@ -126,7 +126,7 @@ export default function KeyNum(){
             <button onClick={()=>entradaNumero(botoes(0))}>0</button>
           </div>
           <div className="quintaFila">
-            <button>Branco</button>
+            <button onClick={()=>confirmaNumero()}>Branco</button>
             <button onClick={()=>corrigeNumero()}>Corrige</button>
             <button onClick={()=>confirmaNumero()}>Confirma</button>
           </div>
