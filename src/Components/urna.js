@@ -1,12 +1,12 @@
 import React from "react";
 import KeyNum from "./keyNum";
-import KeyNumCopy from "../Components/keyNumCopy";
 
 import "./urna.css"
 const Urna = () =>{
   return(
     <div className="backUrna">
-     <KeyNumCopy/>
+      <div className="screenUrna"></div>
+     <div className="keyUrna"><KeyNum/></div>
     </div>
   )
 }

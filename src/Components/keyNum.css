@@ -1,36 +1,45 @@
-.keys{
+.corpoMain {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.table_teclado{
-  font-size: 2rem;
- 
-}
-
-.table_teclado tr td {
-  background: #000000;
-  color: #FFF;
-  padding: 1.1rem ;
-  margin: 1rem;
-  cursor: pointer;
-  position: relative;
-  text-align: center;
+.corpoSecond {
+  display: flex;
   align-items: center;
   justify-content: center;
 }
-.control{
-  font-size: 0.5rem;
-}
 
-.table_teclado tr td:hover {
-  background: #525252;
-}
-
-.btn_delete {
+.entNum {
   position: absolute;
-  left: .1em;
-  bottom: .1em;
-  width: 19px;
+  text-align: center;
+  width: 2vw;
+  left: 20rem;
+  top: 14rem;
+
 }
+.cna{
+  position: absolute;
+  left: 20rem;
+  
+}
+
+.foto{
+  width: 30vw;
+  height: 30vh;
+}
+
+.fila{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.um{
+  margin-right: 2.5rem;
+}
+
+.dois{
+  margin-left: 2.5rem;
+}
+
